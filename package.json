@@ -1,8 +1,12 @@
 {
-  "name": "app",
+  "name": "chromatin",
   "version": "0.0.1",
-  "description": "setup react template",
+  "description": "Pinterest for colors",
   "private": true,
+  "author": {
+    "name": "Matt Josse",
+    "email": "matt.m.josse@gmail.com"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/dev.config.js",
