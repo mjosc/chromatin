@@ -1,15 +1,14 @@
-
 class Server {
-  constructor({ data = [] } = {}) {
+  constructor(data = []) {
     this.data = data;
     this.endpoints = {
-      '/test': {
-        get: () => data.schemas
+      '/schemes': {
+        get: data.schemes,
       }
     };
   }
 
-  handle = (path, method, params) => {
+  handle = (path, method) => {
     const endpoint = this.endpoints[path];
     if (!endpoint) {
       return { success: false, reason: `bad path ${path}`};
@@ -22,7 +21,7 @@ class Server {
   }
   
   get = path => this.handle(path, 'get');
-  post = path => this.handle(path, 'post', null);
+  post = (path, body) => this.handle(path, 'post', body);
 }
 
 export default Server;

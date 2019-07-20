@@ -4,7 +4,7 @@ import axios from '../modules/mocks/axios';
 class App extends Component {
 
   componentDidMount = () => {
-    axios.get('/test')
+    axios.get('/schemes')
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }
