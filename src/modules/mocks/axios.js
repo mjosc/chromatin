@@ -11,7 +11,7 @@ const axios = {
       } else {
         reject(result);
       }
-    }, 3000);
+    }, 1500);
   })
 };
 
